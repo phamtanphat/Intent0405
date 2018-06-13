@@ -18,8 +18,16 @@ public class Main2Activity extends AppCompatActivity {
 //        mang.put("AAA","BBB");
 //
 //        Toast.makeText(this, mang.get("AAA"), Toast.LENGTH_SHORT).show();
+        //Nhan du lieu dang String
+    //        Intent intent = getIntent();
+    //        String chuoi = intent.getStringExtra(MainActivity.Chuoi);
+    //        Toast.makeText(this, chuoi, Toast.LENGTH_SHORT).show();
+        //Nhan du lieu dang Number
         Intent intent = getIntent();
-        String chuoi = intent.getStringExtra(MainActivity.Chuoi);
-        Toast.makeText(this, chuoi, Toast.LENGTH_SHORT).show();
+        if (intent.hasExtra("Number")){
+            int number = intent.getIntExtra("Number",-1);
+            Toast.makeText(this, number + "", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }

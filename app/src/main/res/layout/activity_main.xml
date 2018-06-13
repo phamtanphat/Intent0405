@@ -13,5 +13,10 @@
         android:id="@+id/buttonIntentString"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
+    <Button
+        android:layout_below="@id/buttonIntentString"
+        android:text="Send Number"
+        android:id="@+id/buttonIntentNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </RelativeLayout>
