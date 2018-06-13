@@ -3,8 +3,10 @@ package com.ptp.phamtanphat.intent0405;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Main2Activity extends AppCompatActivity {
@@ -19,15 +21,22 @@ public class Main2Activity extends AppCompatActivity {
 //
 //        Toast.makeText(this, mang.get("AAA"), Toast.LENGTH_SHORT).show();
         //Nhan du lieu dang String
-    //        Intent intent = getIntent();
-    //        String chuoi = intent.getStringExtra(MainActivity.Chuoi);
-    //        Toast.makeText(this, chuoi, Toast.LENGTH_SHORT).show();
+//                Intent intent = getIntent();
+//                String chuoi = intent.getStringExtra(MainActivity.Chuoi);
+//                Toast.makeText(this, chuoi, Toast.LENGTH_SHORT).show();
         //Nhan du lieu dang Number
-        Intent intent = getIntent();
-        if (intent.hasExtra("Number")){
-            int number = intent.getIntExtra("Number",-1);
-            Toast.makeText(this, number + "", Toast.LENGTH_SHORT).show();
-        }
-
+//        Intent intent = getIntent();
+//        if (intent.hasExtra("Number")){
+//            int number = intent.getIntExtra("Number",-1);
+//            Toast.makeText(this, number + "", Toast.LENGTH_SHORT).show();
+//        }
+        //Nhan du lieu dang Arraylist
+//        Intent intent = getIntent();
+//        ArrayList<String> mangten = intent.getStringArrayListExtra("Arraylist");
+//        Log.d("BBB",mangten.get(0));
+//        Nhan du lieu dang Object
+        Intent intent= getIntent();
+        Nhanvien nhanvien= intent.getParcelableExtra("Nhanvien");
+        Toast.makeText(this, nhanvien.getTen(), Toast.LENGTH_SHORT).show();
     }
 }
