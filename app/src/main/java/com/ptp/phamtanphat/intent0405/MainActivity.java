@@ -55,10 +55,11 @@ public class MainActivity extends AppCompatActivity {
                 mangnhanvien.add(new Nhanvien("Nguyen Van A" , "20"));
                 mangnhanvien.add(new Nhanvien("Nguyen Van B" , "25"));
 
-                Nhanvien nhanvien = new Nhanvien("Nguyen Van C","30");
-                Intent intent = new Intent(MainActivity.this,Main2Activity.class);
-                intent.putExtra("Nhanvien", nhanvien);
-                startActivity(intent);
+//                Nhanvien nhanvien = new Nhanvien("Nguyen Van C","30");
+//                Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+//                intent.putExtra("Nhanvien", nhanvien);
+//                startActivity(intent);
+                SendData("Nhanvien",mangnhanvien);
             }
         });
     }
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra(key,(Integer) data);
         }
         if (data instanceof ArrayList<?>){
-            if (data instanceof String){
+            if (data instanceof Object){
                 intent.putExtra(key,(ArrayList<String>) data);
             }
         }

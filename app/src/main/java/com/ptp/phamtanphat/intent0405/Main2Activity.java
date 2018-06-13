@@ -31,12 +31,12 @@ public class Main2Activity extends AppCompatActivity {
 //            Toast.makeText(this, number + "", Toast.LENGTH_SHORT).show();
 //        }
         //Nhan du lieu dang Arraylist
-//        Intent intent = getIntent();
-//        ArrayList<String> mangten = intent.getStringArrayListExtra("Arraylist");
-//        Log.d("BBB",mangten.get(0));
+        Intent intent = getIntent();
+        ArrayList<String> mangten = intent.getStringArrayListExtra("Arraylist");
+        Log.d("BBB",mangten.get(0));
 //        Nhan du lieu dang Object
-        Intent intent= getIntent();
-        Nhanvien nhanvien= intent.getParcelableExtra("Nhanvien");
-        Toast.makeText(this, nhanvien.getTen(), Toast.LENGTH_SHORT).show();
+//        Intent intent= getIntent();
+//        ArrayList<Nhanvien> nhanvien= intent.getParcelableArrayListExtra("Nhanvien");
+//        Toast.makeText(this, nhanvien.get(0).getTen(), Toast.LENGTH_SHORT).show();
     }
 }
