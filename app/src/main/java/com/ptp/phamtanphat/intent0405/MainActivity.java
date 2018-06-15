@@ -75,8 +75,12 @@ public class MainActivity extends AppCompatActivity {
             if (data instanceof Object){
                 intent.putExtra(key,(ArrayList<String>) data);
             }
+            if (data instanceof Object){
+                if (data instanceof Nhanvien) {
+                    intent.putExtra(key,(ArrayList<Nhanvien>) data);
+                }
+            }
         }
-
         startActivity(intent);
     }
 }
